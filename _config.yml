@@ -1,37 +1,70 @@
-# Site configuration
-domain: "http://songroger.win"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://songroger.github.io/" # the base hostname & protocol for your site
+# Site settings
+title: RioZRon's blog
+description: "A blog about RioZRon"
+#baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
+url: "http://victorvoid.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.githu.io'
+
+# User settings
+username: RioZRon
+user_title: RioZRon - LD
+email: rio_work@163.com
+twitter_username: RioZRon
+github_username:  RioZRon
+gplus_username:  RioZRon
+linkedin_public_url: RioZRon # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
+disqus_username: RioZRon
+profile_picture: https://b-ssl.duitang.com/uploads/item/201408/09/20140809233750_BFrPz.jpeg
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
 permalink: /:title/
-avatar: http://7xof48.com1.z0.glb.clouddn.com/avatar.jpg
-about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
-favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
-basecss: 
-# Theme specific configuration
-title: songroger
-description: >
-  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
-  I was born and raised in Hunan China. 
-  I'm really fond of beautiful design, drawing etc.
 
-# Contact and social media links
-twitter_username: songrogero
-github_username: songroger
-facebook_username: song.roger.1
-instagram_username: songroger198
-linkedin_username: songroger
+# html minify
+compress_html:
+  clippings: all
+  comments: all
+  endings: []
+  profile: false
 
-exclude: ['node_modules', 'gulpfile.js', 'package.json']
+# Links to include in menu navigation
+links:
+  section_1:
+    - title: home
+      url: /
+      key_trigger: 1
+    - title: my posts
+      url: /posts
+      key_trigger: 2
+    - title: series
+      url: /series
+      key_trigger: 3
+    - title: tags
+      url: /tags
+      key_trigger: 4
+    - title: about me
+      url: /about
+      key_trigger: 5
+  section_2:
+    - title: github
+      url: http://www.github.com/victorvoid
+      new_tab: true
+      key_trigger: g
+    - title: twitter
+      url: http://www.twitter.com/victorvoid
+      key_trigger: t
+    - title: search
+      url: ""
+      key_trigger: s #WARNING: search only works with "s"
 
-kramdown:
-  input: GFM
+# projects in header index
+projects:
+  - name: fluany
+    url: https://github.com/fluany/fluany
+  - name: vim-frontend
+    url: https://github.com/victorvoid/vim-frontend
+  - name: generator-capybara
+    url: https://github.com/victorvoid/generator-capybara 
 
-# If U enable the comment, edit disqus or duoshuo account
-# before deploy your webpage
-enable_comment: false
-# disqus_account: songroger
-
-gems: ['jekyll-paginate']
-# Pagination
-paginate: 5
-paginate_path: /archive/page:num
+# exclude my node related stuff
+exclude: ['package.json', 'src', 'node_modules']
